@@ -1,0 +1,40 @@
+// Bootstrap overrides for this template
+.btn {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: $headings-font-family;
+}
+
+.btn-primary1 {
+    background-color: rgb(249, 204, 202);
+    border-color: rgba(224, 193, 224,0);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: darken(rgb(249, 204, 202), 7.5) !important;
+        border-color: darken(rgba(224, 193, 224,0), 1) !important;
+    }
+}
+.btn-primary2 {
+    background-color: rgb(173, 216, 230);
+    border-color: rgba(125, 173, 228, 0);
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $white;
+        background-color: darken(rgb(173, 216, 230), 7.5) !important;
+        border-color: darken(rgba(125, 173, 228, 0), 0) !important;
+    }
+}
+
+.btn-lg {
+    font-size: 16px;
+    padding: 25px 35px;
+}
