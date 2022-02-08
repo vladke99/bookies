@@ -9,7 +9,7 @@ background: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/book
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 
-lu: février 2022
+lu: janvier 2022
 pages: 378
 ---
 <br>
