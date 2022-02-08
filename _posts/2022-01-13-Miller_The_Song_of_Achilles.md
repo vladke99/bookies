@@ -1,25 +1,25 @@
 --- 
-        layout: post
-        title: The Song of Achilles
-        description: Madeline Miller
-        background: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1357177533i/13623848._SR1200,630_.jpg
+layout: post
+title: The Song of Achilles
+description: Madeline Miller
+background: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1357177533i/13623848._SR1200,630_.jpg
         rating: <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
 
-        lu: février 2022
-        pages: 378
+lu: février 2022
+pages: 378
 ---
 <br>
-        <h3>Résume</h3>
-        
+<h3>Résume</h3>
 
-        <br>
 
-        <h3>Annotations</h3>
-        <div>
+<br>
+
+<h3>Annotations</h3>
+<div>
 <table border="0" width="100%" cellspacing="2" cellpadding="0" bgcolor="#d3d3d3">
 <tbody><tr>
 <td bgcolor="transparent">
