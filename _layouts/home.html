@@ -12,12 +12,21 @@ layout: default
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="page-heading" style="padding: 50px 0">
-            <h1>{{ site.title }}</h1>
-            {% if site.description %}
-            <span class="subheading" style = "color: #ebebeb"">{{ site.description }}</span>
-            {% endif %}
-          </div>
+          <div class="page-heading" style="padding: 14px 0">
+            <script src = "quote_generator/book_quotes.js"></script>
+              <div class="container">
+                  <div style="height: 26em; padding: 58px;">
+                  <p id="quote" style= "text-align: center; color: #fff; font-size: 20px"></p>
+                  </div>
+              </div>
+              <div id="b-nav">
+                  <button id="gen" onclick="genQuote()">→</button>      
+              </div>
+              <br>
+              <br>
+              <br>
+              <a href="#booklist" class="btn btn-primary js-scroll-trigger" style="
+              font-size: larger">﹀</a> 
         </div>
       </div>
     </div>
@@ -34,7 +43,7 @@ layout: default
   </div> 
 
   <main class="site__content">
-    <section class="blog">
+    <section id= "booklist" class="blog">
       <div class="container">
         <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
           {% for post in site.posts reversed %}
@@ -42,6 +51,14 @@ layout: default
           {% endfor %}
 
         </div>
+      </div>
+    </section>
+    <section id = "stats">
+      <div class="container">
+        <center>
+        <img src="quote_generator/current_stats.png" alt="Current stats" style = "width: 40%; height:
+        40%">
+        </center>
       </div>
     </section>
   </main>

@@ -72,6 +72,59 @@ a {
 
 
   p {
-    word-break: break-all;
+    word-break: word;
     white-space: normal;
+}
+
+#gen {
+  outline: none;
+  padding-top: 5px;
+  text-decoration: none;
+  opacity: 0.6;
+  background-color: #767676;
+  color: white;
+  border: thin solid #b7adad;
+  height: 40px;
+  width: 100px;
+  border-radius: 23px;
+  transition: 0.5s;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+#gen:hover {
+  background-color: white;
+  color: black;
+  border: thin solid black;
+  opacity: 0.8;
+}
+
+#gen a {
+  text-decoration: none;
+}
+#b-nav {
+  padding-bottom: 0em;
+  position: relative;
+  width: 100%;
+  bottom: -2em;
+  text-align: center;
+}
+
+#b-nav ul {
+  margin: 0;
+  padding: 0.5em;
+  list-style-type: none;
+  text-align: center;
+}
+
+#b-nav ul li {
+  display: inline;
+}
+
+#b-nav ul li a {
+  text-decoration: none;
+  padding: .2em 1em;
+  background-color: black;
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
 }

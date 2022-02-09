@@ -2,13 +2,19 @@
 .btn {
     font-size: 14px;
     font-weight: 800;
-    padding: 15px 25px;
+    padding: 0px 25px;
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 0;
     font-family: $headings-font-family;
+    background-color: #bababa !important;
+    border-color: #bababa !important
 }
-
+.btn-primary {
+    color: #fff;
+    background-color: #bababa;
+    border-color: #bababa;
+}    
 .btn-primary1 {
     background-color: rgb(249, 204, 202);
     border-color: rgba(224, 193, 224,0);
