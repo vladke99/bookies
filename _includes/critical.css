@@ -80,6 +80,11 @@ a {
     font-size: xx-large !important;
     padding-right: 10px !important; 
   }
+  .home {
+    color: #9b9b9b;
+    border-color: black;
+    font-size: xx-large !important;
+  }
 
 
   p {
@@ -190,7 +195,7 @@ author_post {
     text-overflow: ellipsis;
     font-weight: 200;
     font-size: 2.5rem;
-    line-height: 2rem;
+    line-height: 3rem;
     font-family: Copernicus,"Libre Baskerville",Georgia,serif;}
 
 book_details{
