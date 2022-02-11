@@ -3,18 +3,16 @@ layout: post
 title: Le Lion
 description: Joseph Kessel
 background: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348788781i/1453138._UY630_SR1200,630_.jpg
-rating: <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span>
+rating: <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star unchecked"></span><span class="fa fa-star unchecked"></span>
 lu: janvier 2020
 pages: 100
+
+summ: Narrateur est en voyage au Kenya
+
+annot: true
 ---
 
-<br>
 
-<h3>Résume</h3>
-Narrateur est en voyage au Kenya
-<br>
-
-<h3>Annotations</h3>
 <div>
 <table border="0" width="100%" cellspacing="2" cellpadding="0" bgcolor="#d3d3d3">
 <tbody><tr>

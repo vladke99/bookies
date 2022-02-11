@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+{% if page.background %}
+<header class="masthead" style="background-image: url('{{ page.background}}')">
+  {% else %}
+  <header class="masthead">
+    {% endif %}
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-8 mx-auto">
+        <h2 >{{ page.title }}</h2>
+        <h3 >{{ page.description }}</h3>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <center>{{page.rating}}</center>
+        <br>
+        <h5 >Lu en {{ page.lu }}</h5>
+        <h5 >{{ page.pages }} pages</h5>
+
+        {{ content }}
+      </div>
+    </div>
+  </div>
+
+<br><br><br>
+

@@ -67,7 +67,18 @@ a {
     display: table;
   }
   .checked {
-    color: orange;
+    color: #e9ab4c;
+    border-color: black;
+    line-height: 100px !important;
+    font-size: xx-large !important;
+    padding-right: 10px !important; 
+  }
+  .unchecked {
+    color: #9b9b9b;
+    border-color: black;
+    line-height: 100px !important;
+    font-size: xx-large !important;
+    padding-right: 10px !important; 
   }
 
 
@@ -127,4 +138,113 @@ a {
   background-color: black;
   opacity: 0.4;
   filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+
+.left_post {
+position: fixed;
+right: 950px;
+top: 0;
+bottom: 0;
+left: 0;
+background-image: url("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348788781i/1453138._UY630_SR1200,630_.jpg");
+background-position: center;
+background-size: cover;
+}
+.right_post {
+float: right;
+width: 950px;
+padding: 0 8px 0 8px;
+padding-right: 200;
+box-sizing:border-box;
+color: rgb(0, 0, 0);
+}
+
+.overlay_post {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #725f5f20
+}
+
+title_post {
+  font-size: 4rem;
+  line-height: 4.6rem;
+  font-family: Copernicus,"Libre Baskerville",Georgia,serif;
+  font-weight: 200;
+  margin: 0;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  display: block;
+  padding-top: 175;
+}
+
+author_post {
+  flex-basis: auto;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 200;
+    font-size: 2.5rem;
+    line-height: 2rem;
+    font-family: Copernicus,"Libre Baskerville",Georgia,serif;}
+
+book_details{
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin: 12px 0;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-family: Montserrat;
+  font-weight: 200;
+  color: #454545;
+  letter-spacing: 0.4px;
+  }
+
+.btn {
+    font-size: 14px;
+    font-weight: 800;
+    padding: 0px 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: $headings-font-family;
+    background-color: #bababa !important;
+    border-color: #bababa !important
+}
+.btn-primary {
+    color: #fff;
+    background-color: #bababa;
+    border-color: #bababa;}
+
+/* The sidebar menu */
+.sidenav {
+  height: 35%; /* Full-height: remove this if you want "auto" height */
+  width: 140px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 40%; /* Stay at the top */
+  right: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #696767;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #e6ad59;
 }
