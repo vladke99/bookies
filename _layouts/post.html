@@ -9,7 +9,8 @@ scroll-behavior: smooth">
 <body style= "background-color: #edebeb">
 <div class="wrapper">
   <div class="right_post">
-    <section id = "general" style = "height: 100%;">
+    <section id = "first" style = "height: 100%;">
+      <a href="{{"/" | relative_url }}"{{site.title | escape}}>Retour à l'accueil</a>
     <title_post>
       {{ page.title }}
     </title_post>
@@ -36,7 +37,7 @@ scroll-behavior: smooth">
     </div>
     </section>
     
-    <section id="summ" style = "height: 100%">
+    <section id="second" style = "height: 100%">
       <author_post style = "line-height:5">
         Résumé
       </author_post>
@@ -44,7 +45,7 @@ scroll-behavior: smooth">
     </section>
 
     {% if page.annot %}
-    <section id="annot" style = "height: 100%;">
+    <section id="third" style = "height: 100%;">
       <author_post style = "line-height:5">
         Annotations
       </author_post>
@@ -52,20 +53,79 @@ scroll-behavior: smooth">
     </section>
     {% endif %}
 
-
-  <a class="left_post" href="{{"/" | relative_url }}"{{site.title | escape}}><div class="overlay_post">
+   <div class="left_post">  
+  <div class="overlay_post">
     
-  </div></a>
+  </div>
   </div>
 
 
-  <div class="sidenav">
+  <!-- <div class="sidenav">
     <a href="#general">Infos</a>
     <a href="#summ">Résumé</a>
     {% if page.annot %}
-    <a href="#annot"><img src="https://www.flaticon.com/free-icons/edit"></a>
+    <a href="#annot"><img src= "quote_generator/current_stats.png" alt="Current stats" style = "width: 40%; height:
+      40%"></a>
     {% endif %}
-
-  </div>
+      
+  </div> -->
+  <script>const indicators = document.querySelectorAll(".indicator");
+    const sections = document.querySelectorAll("section");
+    
+    const resetCurrentActiveIndicator = () => {
+      const activeIndicator = document.querySelector(".active");
+      activeIndicator.classList.remove("active");
+    };
+    
+    const onSectionLeavesViewport = (section) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              resetCurrentActiveIndicator();
+              const element = entry.target;
+              const indicator = document.querySelector(`a[href='#${element.id}']`);
+              indicator.classList.add("active");
+              return;
+            }
+          });
+        },
+        {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.75
+        }
+      );
+      observer.observe(section);
+    };
+    
+    indicators.forEach((indicator) => {
+      indicator.addEventListener("click", function (event) {
+        event.preventDefault();
+        document
+          .querySelector(this.getAttribute("href"))
+          .scrollIntoView({ behavior: "smooth" });
+        resetCurrentActiveIndicator();
+        this.classList.add("active");
+      });
+    });
+    
+    sections.forEach(onSectionLeavesViewport);
+    </script>
+  <aside>
+    <uls>
+      <lis>
+        <a class="indicator active" href="#first"></a>
+      </lis>
+      <lis>
+        <a class="indicator" href="#second"></a>
+      </lis>
+      {% if page.annot %}
+      <lis>
+        <a class="indicator" href="#third"></a>
+      </lis>
+      {% endif %}
+    </ul>
+  </aside>
 </body>
 </html>
