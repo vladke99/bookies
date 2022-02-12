@@ -16,7 +16,7 @@ layout: default
             <script src = "quote_generator/book_quotes.js"></script>
               <div class="container">
                   <div style="height: 26em; padding: 58px;">
-                  <p id="quote" style= "text-align: center; color: #fff; font-size: 20px"></p>
+                  <p id="quote" style= "text-align: center; color: #fff; font-size: 20px; font-weight: 200;"></p>
                   </div>
               </div>
               <div id="b-nav">
@@ -56,13 +56,18 @@ layout: default
         </div>
       </div>
     </section>
-    <section id = "stats" style="height: 100%;">
+
+
+    <!-- <section id = "stats" style="height: 100%;">
         <center>
         <img src="quote_generator/current_stats.png" alt="Current stats" style = "width: 40%; height:
         40%">
         </center>
 
-    </section>
+    </section> -->
+
+    {% include statistics.html %}
+    {% include statistics2.html %}
   </main>
 
 

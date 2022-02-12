@@ -1,0 +1,102 @@
+<section class="section" id="stats" style="height: 100%">
+    <br><br><br>
+    <h2 style="text-align: center; font-family: revert">Statisques de livres lus</h2>
+    <br><br><br><br>
+    <div style="text-align:center">
+        <div class="pie animate" style="--p:90;--c:rgb(232, 164, 76); justify-content: center;font-weight: 200;"><div1 id="books"></div1>Livres en<br> 2022</div>
+        <div class="pie animate" style="--p:90;--c:rgb(81, 143, 237); justify-content: center;"> <div1 id="pages"></div1>Pages en <br>2022</div>
+    </div>
+    
+
+
+
+
+</section>
+
+
+<style> 
+@property --p{
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+.pie {
+  --p:20;
+  --b:22px;
+  --c:darkred;
+  --w:250px;
+  
+  width:var(--w);
+  aspect-ratio:1;
+  position:relative;
+  display:inline-grid;
+  margin:5px;
+  place-content:center;
+  font-size:25px;
+  font-weight:bold;
+  font-family:sans-serif;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.pie:before,
+.pie:after {
+  content:"";
+  position:absolute;
+  border-radius:50%;
+}
+.pie:before {
+  inset:0;
+  background:
+    radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+    conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+          mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+}
+.pie:after {
+  inset:calc(50% - var(--b)/2);
+  background:var(--c);
+  transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+}
+.animate {
+  animation:p 2s .5s both;
+}
+.no-round:before {
+  background-size:0 0,auto;
+}
+.no-round:after {
+  content:none;
+}
+@keyframes p {
+  from{--p:0}
+}
+div1 {
+  font: 800 40px system-ui;
+}
+/* div1::after {
+  content: "%";
+} */
+
+</style>
+
+
+<script> 
+    function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+  window.requestAnimationFrame(step);
+}
+
+const book = document.getElementById("books");
+animateValue(book, 0, 90, 2500);
+
+const pages = document.getElementById("pages");
+animateValue(pages, 0, 2000, 2500);
+</script>
