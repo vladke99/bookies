@@ -7,45 +7,67 @@ scroll-behavior: smooth">
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body style= "background-color: #edebeb">
+<body style= "background-color: #f8f8f8">
 <div class="wrapper">
   <div class="right_post">
     <section id = "first" style = "height: 100%;">
-      
-    <title_post>
-      {{ page.title }}
-    </title_post>
-    <author_post>
-      {{ page.description }}
-    </author_post>
-  
-    {{page.rating}}
-    <book_details>
-      Lu en {{ page.lu }}
-    </book_details>
-    <book_details>
-      {{ page.pages }} pages
-    </book_details>
-
+     <div class="post_row">
+      <div class="post_column" style="flex: 80%">
+      <title_post>
+        {{ page.title }}
+      </title_post>
+      <author_post>
+       {{ page.description }}
+      </author_post>
+      </div>
+      <div class="post_column" style="padding-top: 70; flex: 35%">
+        {{page.rating}}
+        <book_details>
+          Lu en {{ page.lu }}
+        </book_details>
+        <book_details>
+         {{ page.pages }} pages
+         </book_details>
+      </div>
+    </div> 
+    <couverture_post style="
+    padding-left: 10;
+"> Couverture</couverture_post>
+<p style="
+padding-left: 10;
+padding-top: 15;
+">{{ page.couverture }}</p>
+<div style="
+    padding-left: 25%;
+    padding-right: 25%;
+    position: absolute;
+    bottom: 20px;
+"><a href="#second1" class="btn btn-primary js-scroll-trigger" style="
+              font-size: larger;
+              background-color: #111f2200 !important;
+              border-color: #111f2200 !important;
+              color: #524948
+              ">﹀</a></div> 
     </section>
-    
     <section id="second" style = "height: 100%">
-      <author_post style = "line-height:5">
+    <div id="second1">
+      <author_post style = "line-height:3; padding-top: 50">
         Résumé
       </author_post>
       {{ page.summ }} 
-    </section>
+      
+    </div></section>
 
     {% if page.annot %}
     <section id="third" style = "height: 100%;">
-      <author_post style = "line-height:5">
+      <author_post style = "line-height:3; padding-top: 50">
         Annotations
       </author_post>
       {{ content }}
     </section>
     {% endif %}
 
-   <div class="left_post">  
+   <div class="left_post" style="background-image: url('{{ page.background}}')">
   <div class="overlay_post">
     
   </div>

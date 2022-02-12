@@ -69,21 +69,21 @@ a {
   .checked {
     color: #e9ab4c;
     border-color: black;
-    line-height: 100px !important;
+    line-height: 50px !important;
     font-size: xx-large !important;
     padding-right: 10px !important; 
   }
   .unchecked {
     color: #9b9b9b;
     border-color: black;
-    line-height: 100px !important;
+    line-height: 50px !important;
     font-size: xx-large !important;
     padding-right: 10px !important; 
   }
   .home {
     color: #9b9b9b;
     border-color: black;
-    font-size: xx-large !important;
+    font-size: x-large !important;
   }
 
 
@@ -151,7 +151,6 @@ right: 950px;
 top: 0;
 bottom: 0;
 left: 0;
-background-image: url("https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1348788781i/1453138._UY630_SR1200,630_.jpg");
 background-position: center;
 background-size: cover;
 }
@@ -170,7 +169,7 @@ color: rgb(0, 0, 0);
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #725f5f20
+  background-color: #725f5f0d
 }
 
 title_post {
@@ -184,7 +183,6 @@ title_post {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   display: block;
-  padding-top: 175;
 }
 
 author_post {
@@ -206,12 +204,22 @@ book_details{
   margin-inline-end: 0px;
   margin: 12px 0;
   font-size: 1.5rem;
-  line-height: 1.8rem;
+  line-height: 1.15rem;
   font-family: Montserrat;
   font-weight: 200;
   color: #454545;
   letter-spacing: 0.4px;
   }
+couverture_post {
+  flex-basis: auto;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 200;
+    font-size: 1.9rem;
+    line-height: 2rem;
+    font-family: Copernicus,"Libre Baskerville",Georgia,serif;}
 
 .btn {
     font-size: 14px;
@@ -282,4 +290,13 @@ aside uls lis .indicator {
 aside uls lis .active {
   transform: scale(1.7);
   transition: transform 200ms ease-in-out;
+}
+
+.post_row{
+  display: flex;
+}
+.post_column{ 
+  flex: 50%;
+  padding: 10px;
+  height: 300px;
 }

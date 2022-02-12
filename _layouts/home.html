@@ -46,7 +46,7 @@ layout: default
   </div> 
 
   <main class="site__content">
-    <section id= "booklist" class="blog">
+    <section id= "booklist" class="blog" style="height: 100%;">
       <div class="container">
         <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
           {% for post in site.posts reversed %}
@@ -56,13 +56,12 @@ layout: default
         </div>
       </div>
     </section>
-    <section id = "stats">
-      <div class="container">
+    <section id = "stats" style="height: 100%;">
         <center>
         <img src="quote_generator/current_stats.png" alt="Current stats" style = "width: 40%; height:
         40%">
         </center>
-      </div>
+
     </section>
   </main>
 
