@@ -5,14 +5,14 @@
 <script src="https://d3js.org/d3.v6.js"></script>
           
 <!-- Create a div where the graph will take place -->
-<div id="my_dataviz"></div>
+<div id="my_dataviz" style="text-align: center"></div>
 
 <script>
 
     // set the dimensions and margins of the graph
     const margin = {top: 10, right: 30, bottom: 90, left: 40},
-        width = 460 - margin.left - margin.right,
-        height = 450 - margin.top - margin.bottom;
+        width = 800 - margin.left - margin.right,
+        height = 250 - margin.top - margin.bottom;
     
     // append the svg object to the body of the page
     const svg = d3.select("#my_dataviz")
@@ -23,7 +23,7 @@
         .attr("transform", `translate(${margin.left},${margin.top})`);
     
     // Parse the Data
-    d3.csv("https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/7_OneCatOneNum_header.csv").then( function(data) {
+    d3.csv("https://raw.githubusercontent.com/vladke99/bookies/main/quote_generator/genres.csv").then( function(data) {
     
     // X axis
     const x = d3.scaleBand()
@@ -39,7 +39,7 @@
     
     // Add Y axis
     const y = d3.scaleLinear()
-      .domain([0, 13000])
+      .domain([0, 20,40])
       .range([ height, 0]);
     svg.append("g")
       .call(d3.axisLeft(y));
@@ -58,7 +58,7 @@
     // Animation
     svg.selectAll("rect")
       .transition()
-      .duration(800)
+      .duration(1200)
       .attr("y", d => y(d.Value))
       .attr("height", d => height - y(d.Value))
       .delay((d,i) => {console.log(i); return i*100})
