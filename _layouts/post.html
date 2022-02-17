@@ -56,7 +56,10 @@ padding-top: 15;
       </author_post>
       {{ page.summ }} 
 
-      {% if page.annot == false %}
+      
+    </div></section>
+
+    {% if page.annot == false %}
       <footer style="background-color: #f8f8f8;">
         <div class="row" style="width:100%">
           <div class="col-lg-10/12 col-md-12/12 mx-auto">
@@ -65,7 +68,6 @@ padding-top: 15;
         </div>
     </footer>
     {% endif %}
-    </div></section>
 
     {% if page.annot %}
     <section id="third" style = "height: 100%;">
@@ -73,15 +75,18 @@ padding-top: 15;
         Annotations
       </author_post>
       {{ content }}
-      <footer style="background-color: #f8f8f8;">
-        <div class="row" style="width:100%">
-          <div class="col-lg-10/12 col-md-12/12 mx-auto">
-            <p class="copyright text-muted" style="color: #8d8686; text-align:center; padding-top: 10">Mes livres © Vladimir Fayt </p>
-          </div>
-        </div>
-    </footer>
+      
     </section>
-    {% endif %}
+    
+
+    <footer style="background-color: #f8f8f8;">
+      <div class="row" style="width:100%">
+        <div class="col-lg-10/12 col-md-12/12 mx-auto">
+          <p class="copyright text-muted" style="color: #8d8686; text-align:center; padding-top: 10">Mes livres © Vladimir Fayt </p>
+        </div>
+      </div>
+  </footer>
+  {% endif %}
     
    <div class="left_post" style="background-image: url('{{ page.background}}')">
   <div class="overlay_post">
