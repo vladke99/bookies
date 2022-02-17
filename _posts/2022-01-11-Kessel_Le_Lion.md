@@ -8,7 +8,7 @@ lu: janvier 2022
 pages: 243
 genre: Fiction
 couverture: Au Kenya, au coeur d'une réserve naturelle, une petite fille vit en contact étroit avec la nature et les animaux. Fasciné par l'étrange pouvoir qui permet à la jeune fille de communiquer avec le monde sauvage, le narrateur raconte la relation mystérieuse qu'elle a tissée avec un lion.
-summ: Narrateur est en voyage au Kenya
+summ: Le narrateur, j'imagine Kessel, est en voyage au Kenya. Reporter et ecrivain il décrit ses aventures et ses découvertes du monde sauvage et civilisé.
 
 annot: true
 type_: Livre
