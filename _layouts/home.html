@@ -3,7 +3,7 @@ layout: default
 ---
 <html style="
 scroll-behavior: smooth">
-<body>
+<body style="overflow: hidden">
 <!-- Page Header -->
 <section id="first">
 {% if page.background %}
@@ -29,11 +29,12 @@ scroll-behavior: smooth">
               <br>
               <br>
               <br>
-              <a href="#stats" class="btn btn-primary js-scroll-trigger" style="
+              <br>
+              <!-- <a href="#stats" class="btn btn-primary js-scroll-trigger" style="
               font-size: larger;
               background-color: #111f2200 !important;
               border-color: #111f2200 !important;
-              ">﹀</a>
+              ">﹀</a> -->
         </div>
       </div>
     </div>
@@ -46,18 +47,19 @@ scroll-behavior: smooth">
     <div id="stats">
   {% include statistics.html %} 
   <br><br><br>
-  <center><a href="#booklist" class="btn btn-primary js-scroll-trigger" style="
+  <!-- <center><a href="#booklist" class="btn btn-primary js-scroll-trigger" style="
               font-size: larger;
               background-color: #111f2200 !important;
               border-color: #111f2200 !important;
               color: rgb(64, 64, 64) !important;
-              ">﹀</a></center>
+              ">﹀</a></center> -->
   </div></section>
 
-    <section id= "third" class="blog" style="height: 650px;">
+    <section id= "third" class="blog" style="height: 800px;">
+      <div class="container" style="overflow: auto">
       <div id="booklist">
       <br><br>
-      <div class="container">
+      
         <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
           
           {% for post in site.posts reversed %}
@@ -65,7 +67,7 @@ scroll-behavior: smooth">
           {% endfor %}
 
         </div>
-      </div></div>
+      </div></div></div>
     </section>  
 
 
@@ -113,14 +115,14 @@ scroll-behavior: smooth">
       sections.forEach(onSectionLeavesViewport);
       </script>
 
-    <aside>
+    <aside style="top:94%; left:61%">
       <!-- <div style="right:0"><a href="{{"/" | relative_url }}"{{site.title | escape}} ><i class="fa fa-home home"></i></a></div> -->
       <uls>
         <lis>
-          <a class="indicator active" href="#first" style="background-color: #4e6a72"></a>
+          <a class="indicator active" href="#first" style="background-color: #829596"></a>
         </lis>
         <lis>
-          <a class="indicator" href="#second" style="background-color: #364e5a"></a>
+          <a class="indicator" href="#second" style="background-color: #4e6a72"></a>
         </lis>
         <lis>
           <a class="indicator" href="#third" style="background-color: #364e5a"></a>
