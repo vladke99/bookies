@@ -45,8 +45,16 @@ scroll-behavior: smooth">
 
   <section id="second" style="height: 800px;">
     <div id="stats">
-  {% include statistics.html %} 
-  <br><br><br>
+      <br>
+<h2 style="text-align: center; font-family: revert">Statisques de livres lus en 2022</h2>
+<!-- {% for post in site.posts reversed %}
+{% if post.stat == true %}
+<div style="text-align: center"><a href="{{ post.url | relative_url }}" style="color: #939393;">Statistiques des années passées</a></div>
+  {% endif %}
+{% endfor %} -->
+<br><br>
+  {% include statistics_2022.html %} 
+  <br><br>
   <!-- <center><a href="#booklist" class="btn btn-primary js-scroll-trigger" style="
               font-size: larger;
               background-color: #111f2200 !important;
@@ -58,15 +66,22 @@ scroll-behavior: smooth">
     <section id= "third" class="blog" style="height: 800px;">
       <div class="container" style="overflow: auto">
       <div id="booklist">
-      <br><br>
+        
+        <h2 style="text-align: center; font-family: revert">Liste des livres</h2>
+      <br>
       
-        <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+      <div class="scrollbox" style="width:1142px; height:566px">
+        <div class="scrollbox-content">
+          <div class="post-list" itemscope="" itemtype="http://schema.org/Blog">
+          
           
           {% for post in site.posts reversed %}
+          {% if post.stat != true %}
             {% include card.html %}
+            {% endif %}
           {% endfor %}
 
-        </div>
+        </div></div></div>
       </div></div></div>
     </section>  
 

@@ -1,0 +1,40 @@
+--- 
+stat: true
+---
+<html style="
+scroll-behavior: smooth">
+
+{% include head.html %}
+<style class="inlineCSS">
+
+  {% include critical.css %}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body style= "background-color: #f8f8f8; overflow: auto"> 
+  <section id="first" style="height: 800px;">
+    <br>
+    <h2 style="text-align: center; font-family: revert">2022</h2>
+    <br><br>
+{% include statistics_2022.html %}
+<br><br>
+</section>
+<section id="second" style="height: 800px;">
+  <br>
+  <h2 style="text-align: center; font-family: revert">2021</h2>
+  <br><br>
+{% include statistics_2021.html %}
+<br><br>
+</section> 
+
+<aside style="right: 27%">
+  <!-- <div style="right:0"><a href="{{"/" | relative_url }}"{{site.title | escape}} ><i class="fa fa-home home"></i></a></div> -->
+  <uls>
+    <lis style="padding-top:14px"><a href="{{"/" | relative_url }}"{{site.title | escape}} ><i class="fa fa-home home"></i></a></lis>
+    <lis style="padding-top:14px"><a href=#first ><i class="fa fa-chevron-up home" ></i></a></lis>
+  </ul>
+</aside>
+
+</body>
+
+</html>

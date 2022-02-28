@@ -36,7 +36,7 @@ scroll-behavior: smooth">
     padding-bottom: 30;
 "> Couverture</couverture_post></div>
 
-<div class="scrollbox" style="padding-left:10; height:319">
+<div class="scrollbox" style="padding-left:10; height:247">
   <div class="scrollbox-content"> 
     {{ page.couverture }}</div> 
 <!-- <div style="
@@ -51,6 +51,7 @@ scroll-behavior: smooth">
               color: #524948
               ">﹀</a></div>  -->
     </section>
+    {% if page.summ != false %}
     <section id="second" style = "height: 100%">
     <div id="second1">
       <author_post style = "line-height:3; padding-top: 50">
@@ -73,7 +74,7 @@ scroll-behavior: smooth">
               color: #524948
               ">﹀</a></div> 
     {% endif %} -->
-  </section>
+  </section>{% endif %}
 
     {% if page.annot == false %}
       <footer style="background-color: #f8f8f8;">
@@ -173,9 +174,11 @@ scroll-behavior: smooth">
       <lis>
         <a class="indicator active" href="#first"></a>
       </lis>
+      {% if page.summ != false %}
       <lis>
         <a class="indicator" href="#second"></a>
       </lis>
+      {% endif %}
       {% if page.annot %}
       <lis>
         <a class="indicator" href="#third"></a>
