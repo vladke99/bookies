@@ -7,7 +7,7 @@ scroll-behavior: smooth">
 
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body style= "background-color: #f8f8f8; overflow: hidden">
+<body style= "background-color: #f8f8f8; overflow: auto">
 <div class="wrapper">
   <div class="right_post">
     <section id = "first" style = "height: 100%;">
@@ -30,9 +30,10 @@ scroll-behavior: smooth">
          </book_details>
       </div>
     </div> 
+    <div class="post_row">
     <couverture_post style="
     padding-left: 10;
-"> Couverture</couverture_post>
+"> Couverture</couverture_post></div>
 <p style="
 padding-left: 10;
 padding-top: 15;
@@ -77,19 +78,21 @@ padding-top: 15;
       <footer style="background-color: #f8f8f8;">
         <div class="row" style="width:100%">
           <div class="col-lg-10/12 col-md-12/12 mx-auto">
-            <p class="copyright text-muted" style="color: #8d8686; text-align:center; padding-top: 10">Mes livres © Vladimir Fayt </p>
+            <p class="copyright text-muted" style="color: #8d8686; text-align:end; padding-top: 0">Mes livres © Vladimir Fayt </p>
           </div>
         </div>
     </footer>
     {% endif %}
 
     {% if page.annot %}
-    <section id="third" style = "height: 100%;">
+    <section id="third" style = "height: 92%;">
       <div id="third1"></div>
       <author_post style = "line-height:3; padding-top: 50">
         Annotations
-      </author_post>
-      {{ content }}
+      </author_post><div class="scrollbox">
+        <div class="scrollbox-content"> 
+      {{ content }}</div> 
+    </div>
       
     </section>
     
@@ -97,7 +100,7 @@ padding-top: 15;
     <footer style="background-color: #f8f8f8;">
       <div class="row" style="width:100%">
         <div class="col-lg-10/12 col-md-12/12 mx-auto">
-          <p class="copyright text-muted" style="color: #8d8686; text-align:center; padding-top: 10">Mes livres © Vladimir Fayt </p>
+          <p class="copyright text-muted" style="color: #8d8686; text-align:end; padding-top: 0">Mes livres © Vladimir Fayt </p>
         </div>
       </div>
   </footer>
