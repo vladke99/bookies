@@ -5,7 +5,7 @@
         <div class="pie-wrapper"><div class="pie animate" style="--p:17.142857142857142;--c:rgb(229 168 90); justify-content: center;font-weight: 200;"><div1 id="books"></div1>Livres</div></div>
     </div>
     <div class="post_column">
-        <div class="pie1-wrapper"><div class="pie1 animate" style="--p:13.208333333333332;--c:rgb(163 229 168); justify-content: center;font-weight: 200;"> <div1 id="pages"></div1>Pages</div></div>
+        <div class="pie1-wrapper"><div class="pie1 animate" style="--p:18.691666666666666;--c:rgb(163 229 168); justify-content: center;font-weight: 200;"> <div1 id="pages"></div1>Pages</div></div>
     </div>
     <div class="post_column"></div>
   </div>
@@ -15,12 +15,12 @@
 
 
 <div class="bar_chart">
-<div class="bar-wrapper1 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Fiction"></div></div>
-<div class="bar-wrapper2 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Historical Fiction"></div></div>
-<div class="bar-wrapper3 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Non-Fiction"></div></div>
-<div class="bar-wrapper4 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Polar"></div></div>
-<div class="bar-wrapper5 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Science Fiction"></div></div>
-<div class="bar-wrapper6 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:16.666666666666668%" title="Science-Fiction"></div></div>
+<div class="bar-wrapper1 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:14.285714285714286%" title="Fiction"></div></div>
+<div class="bar-wrapper2 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:14.285714285714286%" title="Historical Fiction"></div></div>
+<div class="bar-wrapper3 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:14.285714285714286%" title="Non-Fiction"></div></div>
+<div class="bar-wrapper4 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:14.285714285714286%" title="Polar"></div></div>
+<div class="bar-wrapper5 bar_chart_li" hover_text = "1"><div class="span_bar" style="height:14.285714285714286%" title="Science Fiction"></div></div>
+<div class="bar-wrapper6 bar_chart_li" hover_text = "2"><div class="span_bar" style="height:28.571428571428573%" title="Science-Fiction"></div></div>
 </div>
 </div>
 <!-- a -->
@@ -238,7 +238,7 @@ div1 {
       pie.classList.add('animate');
       const book = document.getElementById("books");
       /* book */
-      animateValue(book, 0, 6, 2500);  
+      animateValue(book, 0, 7, 2500);  
       /* book_end */
 	  return; // if we added the class, exit the function
     }
@@ -258,7 +258,7 @@ const observer0 = new IntersectionObserver(entries => {
       pie_1.classList.add('animate');
       const pages = document.getElementById("pages");
       /* pages */
-      animateValue(pages, 0, 1585, 2500);
+      animateValue(pages, 0, 2243, 2500);
       /* pages_end */
 	  return; // if we added the class, exit the function
     }
